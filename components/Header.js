@@ -6,8 +6,8 @@ import {
   SearchIcon,
   UsersIcon, } from '@heroicons/react/solid';
 import { useState } from "react";
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import 'react-date-range/dist/styles.css'; 
+import 'react-date-range/dist/theme/default.css'; 
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/dist/client/router"
 

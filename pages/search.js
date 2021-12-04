@@ -2,19 +2,15 @@ import { useRouter } from "next/dist/client/router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 function Search({searchResults}) {
 
-  
   const router = useRouter();
-  console.log(searchResults)
   const {location, startDate, endDate, noOfGuests} = router.query;
 
   const formattedStartDate = startDate.split('T')[0];
   const formattedEndDate = endDate.split('T')[0];
-
-  //const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
-  //const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `from ${formattedStartDate} to ${formattedEndDate}`;
 
   return (
@@ -47,6 +43,9 @@ function Search({searchResults}) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults}/>
         </section>
       </main>
       <Footer/>
